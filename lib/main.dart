@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -52,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 30),
             Linkify(
               text: _controller.text,
+              options: LinkifyOptions(humanize: false),
               onOpen: (link) async {
                 final uri = link.url;
                 final url = Uri.parse(uri);
